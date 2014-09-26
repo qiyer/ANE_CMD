@@ -1,0 +1,2 @@
+call "swf.bat"
+pause
