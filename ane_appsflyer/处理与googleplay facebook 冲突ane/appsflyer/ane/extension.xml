@@ -1,0 +1,13 @@
+<extension xmlns="http://ns.adobe.com/air/extension/13.0">
+    <id>com.appsflyer.adobeair</id> 
+    <versionNumber>0.0.1</versionNumber> 
+    <platforms> 
+        <platform name="Android-ARM">
+            <applicationDeployment>
+                <nativeLibrary>AppsFlyerExtension.jar</nativeLibrary>
+                <initializer>com.appsflyer.adobeair.AppsFlyerExtension</initializer>
+                <finalizer>com.appsflyer.adobeair.AppsFlyerExtension</finalizer>
+            </applicationDeployment> 
+        </platform>
+</platforms>
+</extension>

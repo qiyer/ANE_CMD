@@ -1,0 +1,13 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.5">
+	<id>com.ane.ANEManager</id>
+	<versionNumber>1.1</versionNumber>
+
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>ane.jar</nativeLibrary>
+				<initializer>com.he.ane.HeExtension</initializer>
+			</applicationDeployment>
+		</platform>
+	</platforms>
+</extension>

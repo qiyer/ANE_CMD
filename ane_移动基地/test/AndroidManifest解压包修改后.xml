@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.want.oyeeocatapultball">
+    <application android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="@string/app_name" android:name="com.want.oyeeocatapultball.CmgameApplication">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name=".AppEntry" android:screenOrientation="user" android:theme="@style/Theme.NoShadow" android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data android:name="namespaceVersion" android:value="13.0"/>
+            <meta-data android:name="airDownloadURL" android:value="https://market.android.com/details?id=com.adobe.air"/>
+            <meta-data android:name="aspectRatio" android:value="landscape"/>
+            <meta-data android:name="autoOrients" android:value="true"/>
+            <meta-data android:name="fullScreen" android:value="true"/>
+            <meta-data android:name="uniqueappversionid" android:value="56b685dc-208e-4c24-9a50-e2548e2e9aca"/>
+            <meta-data android:name="initialcontent" android:value="androidWant.swf"/>
+            <meta-data android:name="containsVideo" android:value="false"/>
+        </activity>
+<activity android:name="cn.cmgame.billing.api.GameOpenActivity"
+			android:screenOrientation="landscape">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.CHINAMOBILE_OMS_GAME" />
+				<category android:name="android.intent.category.CHINAMOBILE_GAMES" />
+			</intent-filter>
+		</activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+</manifest>

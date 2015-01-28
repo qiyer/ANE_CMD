@@ -1,0 +1,1 @@
+1.移动基地 打好的包必须 解压开（使用 ApkToolkit） 修改 AndroidManifest.xml ,并且 将 移动基地 示例中asset的  资源 放入你的 包的asset 里面，然后 重新 合成包，签名（使用 ApkToolkit）。

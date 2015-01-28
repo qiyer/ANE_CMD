@@ -1,0 +1,1 @@
+keytool -printcert -file CERT.RSA

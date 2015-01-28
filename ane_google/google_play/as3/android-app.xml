@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!-- Usage: To localize the description, use the following format for the 
+	description element. <description> <text xml:lang="en">English App description 
+	goes here</text> <text xml:lang="fr">French App description goes here</text> 
+	<text xml:lang="ja">Japanese App description goes here</text> </description> 
+	To localize the name, use the following format for the name element. <name> 
+	<text xml:lang="en">English App name goes here</text> <text xml:lang="fr">French 
+	App name goes here</text> <text xml:lang="ja">Japanese App name goes here</text> 
+</name> -->
+<application xmlns="http://ns.adobe.com/air/application/14.0">
+	<id>com.auer.wu.tw06</id>
+	<versionNumber>1.4.6</versionNumber>
+	<filename>武俠萌萌打</filename>
+	<description/>
+	<name>武俠萌萌打</name>
+	<copyright/>
+	<initialWindow>
+		<content>android.swf</content>
+		<systemChrome>standard</systemChrome>
+		<transparent>false</transparent>
+		<visible>true</visible>
+		<fullScreen>true</fullScreen>
+		<aspectRatio>landscape</aspectRatio>
+		<renderMode>direct</renderMode>
+		<autoOrients>true</autoOrients>
+	</initialWindow>
+	<icon>
+		<image29x29>29.png</image29x29>
+		<image48x48>48.png</image48x48>
+		<image50x50>50.png</image50x50>
+		<image57x57>57.png</image57x57>
+		<image58x58>58.png</image58x58>
+		<image72x72>72.png</image72x72>
+		<image100x100>100.png</image100x100>
+		<image114x114>114.png</image114x114>
+		<image512x512>512.png</image512x512>
+	</icon>
+	<customUpdateUI>false</customUpdateUI>
+	<allowBrowserInvocation>false</allowBrowserInvocation>
+	<iPhone>
+		<InfoAdditions><![CDATA[
+			<key>UIDeviceFamily</key>
+			<array>
+				<string>1</string>
+			</array>
+			]]></InfoAdditions>
+			<requestedDisplayResolution>high</requestedDisplayResolution>
+		</iPhone>
+		<supportedLanguages>zh</supportedLanguages>
+		<android>
+			<colorDepth>32bit</colorDepth>
+			<manifestAdditions><![CDATA[
+				<manifest android:installLocation="preferExternal">
+					<application >
+						<receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
+						<intent-filter>
+						<action android:name="com.android.vending.INSTALL_REFERRER" />
+						</intent-filter>
+						</receiver>
+						<receiver android:name="com.google.android.apps.analytics.AnalyticsReceiver" android:exported="true">
+						<intent-filter>
+						<action android:name="com.android.vending.INSTALL_REFERRER" />
+						</intent-filter>
+						</receiver>
+						<service android:name="com.update.ane.LocalService">
+							<intent-filter>   
+								 <action android:name="com.updategame.service" /> 
+							</intent-filter>
+						</service> 
+							
+						<activity android:name="com.freshplanet.inapppurchase.activities.BillingActivity" />
+
+						<service android:name="com.freshplanet.inapppurchase.BillingService" />
+						
+						<receiver android:name="com.google.android.apps.analytics.AnalyticsReceiver" android:exported="true"> 
+						  <intent-filter> 
+						   <action android:name="com.android.vending.INSTALL_REFERRER" /> 
+						  </intent-filter> 
+						</receiver> 
+						
+						<receiver android:name="com.admob.android.ads.analytics.InstallReceiver" android:exported="true"> 
+						     <intent-filter> 
+							   <action android:name="com.android.vending.INSTALL_REFERRER" /> 
+							 </intent-filter> 
+						</receiver> 
+						
+						<activity android:name="com.freshplanet.ane.AirFacebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+						<activity android:name="com.freshplanet.ane.AirFacebook.DialogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+						<activity android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+						
+						<activity android:name="net.metaps.sdk.WallActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"></activity>
+						<activity android:name="com.tapjoy.TJCOffersWebView" android:configChanges="keyboardHidden|orientation|screenSize" />
+						<activity android:name="com.tapjoy.TapjoyFullScreenAdWebView" android:configChanges="keyboardHidden|orientation|screenSize" />
+						<activity android:name="com.tapjoy.TapjoyVideoView" android:configChanges="keyboardHidden|orientation|screenSize" />
+						<activity android:name="com.tapjoy.TJAdUnitView" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true" />
+						<activity android:name="com.tapjoy.mraid.view.ActionHandler" android:configChanges="keyboardHidden|orientation|screenSize" />
+						<activity android:name="com.tapjoy.mraid.view.Browser" android:configChanges="keyboardHidden|orientation|screenSize" />
+						<receiver
+							android:name="com.tencent.android.tpush.XGPushReceiver"
+							android:process=":xg_service_v2" >
+							<intent-filter android:priority="0x7fffffff" >
+								<action android:name="com.tencent.android.tpush.action.SDK" />
+								<action android:name="android.intent.action.BOOT_COMPLETED" />
+								<action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+								<action android:name="android.intent.action.TIME_SET" />
+								<action android:name="android.intent.action.DATE_CHANGED" />
+								<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+								<action android:name="android.intent.action.BATTERY_CHANGED" />
+								<action android:name="android.intent.action.ACTION_BATTERY_OKAY" />
+								<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+								<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+								<action android:name="android.intent.action.USER_PRESENT" />
+								<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+							</intent-filter>
+							<intent-filter android:priority="0x7fffffff" >
+								<action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+								<action android:name="android.intent.action.MEDIA_REMOVED" />
+								<action android:name="android.intent.action.MEDIA_CHECKING" />
+								<action android:name="android.intent.action.MEDIA_EJECT" />
+
+								<data android:scheme="file" />
+							</intent-filter>
+						</receiver>
+						<!-- push service -->
+						<service
+							android:name="com.tencent.android.tpush.service.XGPushService"
+							android:exported="true"
+							android:process=":xg_service_v2" />
+
+						<!-- 请修改为APP的AccessId -->
+						<meta-data
+							android:name="XG_V2_ACCESS_ID"
+							android:value="2100044475" />
+						<!-- 请修改为APP的AccessKey -->
+						<meta-data
+							android:name="XG_V2_ACCESS_KEY"
+							android:value="ANVRI26W149S" />
+					</application>
+					<!-- 这个是SDK需要的权限 -->
+					<uses-feature android:name="android.hardware.telephony" android:required="false" />
+					<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+					<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+					<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+					<uses-permission android:name="android.permission.INTERNET" />
+					<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+					<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+					<uses-permission android:name="android.permission.CALL_PHONE" />
+					<uses-permission android:name="android.permission.GET_TASKS" />
+					<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+					<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+					<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+					<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+					<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+					<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+					<uses-permission android:name="android.permission.WAKE_LOCK" />
+					<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+					<uses-permission android:name="android.permission.VIBRATE" />
+					<uses-permission android:name="android.permission.BATTERY_STATS" />
+					<uses-permission android:name="com.android.vending.BILLING" />
+					
+					<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+					<uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+					<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+					<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+					<uses-permission android:name="android.permission.READ_LOGS" />
+					<uses-permission android:name="android.permission.BLUETOOTH" />
+
+					<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="9" />
+
+					<supports-screens
+					android:xlargeScreens="true"
+					android:largeScreens="true"
+					android:normalScreens="true"
+					android:smallScreens="true"
+					android:anyDensity="true" />
+
+
+	</manifest>]]></manifestAdditions>
+			</android>
+			<versionLabel/>
+			<extensions>
+			    <extensionID>com.freshplanet.AirFacebook</extensionID>
+			    <extensionID>com.appsflyer.adobeair</extensionID>
+				<extensionID>com.freshplanet.AirInAppPurchase</extensionID>
+				<extensionID>com.xiawu.update.ANEManager</extensionID>
+                <extensionID>net.metaps.sdk</extensionID>
+				<extensionID>com.tapjoy.extensions</extensionID>
+			</extensions>
+		</application>
